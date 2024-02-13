@@ -7,14 +7,15 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class ControllerC {
 
-    @Autowired
     private GreetingServiceClass greetingService;
 
+    @Autowired
     public void setGreetingService(GreetingServiceClass greetingService) {
         this.greetingService = greetingService;
     }
 
     public String sayHallo() {
+        System.out.println("TEST VYPISU");
         return greetingService.sayGreeting();
     }
 }
